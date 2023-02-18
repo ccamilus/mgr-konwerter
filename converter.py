@@ -247,7 +247,8 @@ class Converter(tk.Frame):
                         messagebox.showerror(
                             "Two identical coordinates", "Two identical coordinates found in the file: " + filename + ". Conversion of this file will be skipped!")
                         return
-                    performed_moves[j] = 1
+                    previous_playing_player = 1 if current_playing_player == 0 else 0
+                    performed_moves[j * 2 + previous_playing_player] = 1
 
         for i in range(len(moves) + 1):
             current_playing_player = 0 if i % 2 == 0 else 1
