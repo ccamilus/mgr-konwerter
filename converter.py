@@ -239,15 +239,15 @@ class Converter(tk.Frame):
                     moving_decision.append(0)
 
         def update_performed_moves():
+            previous_playing_player = 1 if current_playing_player == 0 else 0
             for j in range(len(performed_moves)):
                 if ((board_size * int(moves[i - 1][1])) - (board_size - int(moves[i - 1][0]))) == (j + 1):
-                    if performed_moves[j] == 1:
+                    if performed_moves[j * 2 + previous_playing_player] == 1 or performed_moves[j * 2] == 1:
                         nonlocal is_data_correct
                         is_data_correct = False
                         messagebox.showerror(
                             "Two identical coordinates", "Two identical coordinates found in the file: " + filename + ". Conversion of this file will be skipped!")
                         return
-                    previous_playing_player = 1 if current_playing_player == 0 else 0
                     performed_moves[j * 2 + previous_playing_player] = 1
 
         for i in range(len(moves) + 1):
