@@ -26,10 +26,13 @@ Do stworzenia pliku `*.csv` konwerter potrzebuje informacji o rozmiarze planszy 
 Wartości binarne w danych to 0 lub 1. Kolumna **player** informuje, którego gracza jest teraz kolej. Kolumny **0player_field_N** i **1player_field_N** informują czy pole planszy **N** jest zajęte przez gracza 0 lub 1. Dla przykładu kolumna informująca o tym, że gracz 1 zajął pole planszy o numerze 24 to **1player_field_24**. Kolumny oznaczone jako **player_decision_N** mówią o tym które pole planszy dany gracz wybrał.
 
 ## Jak pobrać i uruchomić konwerter
+Do uruchomienia programu potrzeba:
+- `python3`
+- `tkinter`
+
 Po pobraniu repozytorium:
 
 ```
-cd mgr-konwerter
 python3 converter.py
 ```
 
