@@ -27,18 +27,21 @@ Wartości binarne w danych to 0 lub 1. Kolumna **player** informuje, którego gr
 
 ## Jak pobrać i uruchomić konwerter
 Do uruchomienia programu potrzeba:
-- `python3`
+- `python>=3.6`
 - `tkinter`
 
-Po pobraniu repozytorium:
-
-```
+Linux:
+```bash
 python3 converter.py
+```
+
+Windows:
+```bash
+py converter.py
 ```
 
 ## Jak przekonwertować pliki
 ![konwerter](doc/conv.PNG)
 
-Aby przekowertować pliki należy kliknąć `Select files` po czym wybrać pliki z roszerzeniem `*.psq`. Następnie należy wybrać ścieżkę, gdzie umieścić przekonwertowane pliki `*.csv`. Teraz po kliknięciu `Convert fiels` nastąpi konwersja. Program poinformuje użytkownika natrafionych błędach podczas konwersji, na przykład:
+Aby przekowertować pliki należy kliknąć `Select files` po czym wybrać pliki z roszerzeniem `*.psq`. Następnie należy wybrać ścieżkę, gdzie umieścić przekonwertowane pliki `*.csv`. Teraz po kliknięciu `Convert fiels` nastąpi konwersja. Ewentualne błędy podczas konwersacji zostaną zapisane w fomie logów w pliku `conversion.log` w katalogu wyjściowym.
 
-![błąd konwersji](doc/conv_error_example.PNG)
